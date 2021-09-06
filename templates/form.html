@@ -1,0 +1,44 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Language Translator</h1>
+
+        <form action='/submit' method='post'>
+            <textarea name="text" rows="4" cols="50">Enter text here...</textarea>
+
+            <label for="language">Language</label>
+
+            <select name="language" id="cars">
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+                <option value="odia">Odia</option>
+                <option value="gujarati">Gujarati</option>
+                <option value="telugu">Telugu</option>
+                <option value="tamil">Tamil</option>
+                <option value="malayalam">Malayalam</option>
+                <option value="punjabi">Punjabi</option>
+                <option value="kannada">Kannada</option>
+                <option value="bengali">Bengali</option>
+            </select>
+
+            <button type='submit'>Translate</button>
+        </form>
+
+        <!-- {%for item in data_out%}
+        {{ data_out[loop.index0] }}
+        {% endfor %} -->
+        
+        <div class="col-md-6">
+            <h5 class="text-blue text-center">Translated: </h5>
+            <div class="alert alert-primary" role="alert"> {{ data_trans }} </div>
+        </div>
+        <div class="col-md-6">
+            <h5 class="text-blue text-center">Your text was in:</h5>
+            <div style="text-align: left;" class="alert alert-primary" role="alert"> {{ data_ori_lang }} </div>
+        </div>
+
+
+    </body>
+</html>
